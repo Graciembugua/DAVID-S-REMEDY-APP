@@ -109,6 +109,68 @@ All colors MUST be HSL.
   }
 }
 
+/* David's Remedy AI Companion Chat Styles */
+@layer components {
+  .chat-bubble {
+    @apply rounded-2xl p-4 max-w-[80%] break-words;
+  }
+  
+  .chat-bubble-user {
+    @apply bg-accent text-accent-foreground ml-auto;
+  }
+  
+  .chat-bubble-assistant {
+    @apply bg-primary text-primary-foreground mr-auto;
+  }
+  
+  .suggestion-chip {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+    @apply bg-secondary text-secondary-foreground border border-border;
+    @apply hover:bg-primary hover:text-primary-foreground transition-all duration-200;
+    @apply cursor-pointer select-none;
+  }
+  
+  .typing-indicator {
+    @apply flex items-center space-x-1 text-muted-foreground;
+  }
+  
+  .typing-dot {
+    @apply w-2 h-2 bg-current rounded-full animate-pulse;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
