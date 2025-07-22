@@ -61,7 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// David's Remedy custom colors using semantic tokens
+				'sky-blue': 'hsl(var(--sky-blue))',
+				'light-sky-blue': 'hsl(var(--light-sky-blue))',
+				'mustard-yellow': 'hsl(var(--mustard-yellow))',
+				'warm-white': 'hsl(var(--warm-white))',
+				'deep-blue': 'hsl(var(--deep-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
